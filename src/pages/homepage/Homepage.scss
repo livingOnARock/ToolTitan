@@ -1,0 +1,76 @@
+.Homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 2em;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+
+  .Homepage-intro {
+    border: solid orange 2px;
+    border-radius: 5px;
+    margin: 2em;
+    span {
+      font-size: 2em;
+      font-weight: 600;
+    }
+    .orange {
+      color: orange;
+    }
+    .red {
+      color: red;
+    }
+    button {
+      background-color: red;
+      color: white;
+      padding: 0.1em 1em;
+      font-size: large;
+      border-radius: 5px;
+      margin: 0.5em 0 1em 0;
+      font-weight: 500;
+    }
+  }
+  .Homepage-subhedding {
+    font-size: x-large;
+    color: red;
+    border-bottom: solid orange 2px;
+    margin-bottom: 1em;
+    padding: 0 1em;
+  }
+
+  .Homepage-toolPreview {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .Homepage-icon-container {
+      width: 45%;
+      border: solid 2px lightgray;
+      margin: 0.4em;
+
+      img {
+        width: 100%;
+      }
+
+      &:active,
+      &:hover {
+        border: red solid 2px;
+      }
+    }
+  }
+  .Homepage-shopBrands {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .Homepage-brandContainer {
+      margin: 0.3em;
+      &:active,
+      &:hover {
+        border: red solid 2px;
+      }
+    }
+  }
+}

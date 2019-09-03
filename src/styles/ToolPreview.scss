@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+$screen-xs-min: 425px; // Tiny phones
+$screen-sm-min: 576px; // Small tablets and large smartphones (landscape view)
+$screen-md-min: 752px; // Small tablets (portrait view)
+$screen-lg-min: 992px; // Tablets and small desktops
+$screen-xl-min: 1200px; // Large tablets and desktops
+
+// Mixins
+@mixin xs {
+  @media (min-width: #{$screen-xs-min}) {
+    @content;
+  }
+} // Tiny devices
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+} // Small devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+} // Medium devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+} // Large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+} // Extra large devices
+
+$red: #cc4e46;
+
+.ToolPreview {
+  width: 80%;
+  display: inline-flex;
+  border: solid green 3px;
+  border-radius: 10px;
+
+  img {
+    width: 50%;
+  }
+
+  .ToolPreview-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+    color: green;
+    h4 {
+    }
+
+    h3 {
+      text-align: start;
+      margin: 10px 0;
+      border: solid green 3px;
+    }
+    button {
+      background-color: green;
+      color: white;
+      height: 3em;
+      margin-top: 10px;
+    }
+  }
+
+  @include sm {
+    // 576px window width and more
+    width: 231px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+    padding-top: 5px;
+
+    img {
+      width: 95%;
+      margin-bottom: 10px;
+    }
+
+    .ToolPreview-info {
+      width: 95%;
+      font-size: x-large;
+      background-color: lightyellow;
+
+      h3 {
+        text-align: center;
+        border: solid green 3px;
+        border-radius: 5px;
+        padding: 15px;
+        font-size: x-large;
+      }
+
+      button {
+        font-size: x-large;
+        border-radius: 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,390 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+$screen-xs-min: 425px; // Tiny phones
+$screen-sm-min: 576px; // Small tablets and large smartphones (landscape view)
+$screen-md-min: 752px; // Small tablets (portrait view)
+$screen-lg-min: 992px; // Tablets and small desktops
+$screen-xl-min: 1200px; // Large tablets and desktops
+
+// Mixins
+@mixin xs {
+  @media (min-width: #{$screen-xs-min}) {
+    @content;
+  }
+} // Tiny devices
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+} // Small devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+} // Medium devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+} // Large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+} // Extra large devices
+
+$red: #cc4e46;
+
+.Tool {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+  padding-top: 100px;
+  position: relative;
+
+  h2 {
+    padding: 20px;
+    padding-bottom: 0;
+    font-size: xx-large;
+    background-color: green;
+    padding: 20px 40px;
+    color: white;
+    margin: 0 0 2em 0;
+  }
+
+  .Tool-presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+
+    .Tool-activeImg {
+      width: 20em;
+      height: 20em;
+      align-self: center;
+      padding: 5px;
+    }
+
+    .Tool-preview-images {
+      img {
+        width: 70px;
+        height: 70px;
+
+        padding: 5px;
+      }
+    }
+  }
+
+  .Tool-information {
+    padding: 10%;
+    padding-top: 0;
+
+    h1 {
+      background-color: green;
+      padding: 30px;
+      margin: 1em 0;
+      color: white;
+      width: 100%;
+    }
+    .descriptions {
+      text-align: start;
+      padding-left: 20px;
+      font-size: large;
+    }
+
+    .Tool-cart {
+      background: whitesmoke;
+      width: 80%;
+
+      margin: 40px auto;
+      padding: 20px;
+
+      .Tool-controlCount {
+        display: inline-flex;
+        justify-content: center;
+        width: 90%;
+        padding: 5px;
+
+        .Tool-controlCount-controls {
+          width: 75px;
+          height: 50px;
+        }
+
+        .Tool-controlCount-count {
+          width: 50px;
+          height: 50px;
+          margin: 0 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 30px;
+        }
+      }
+
+      .Tool-cartButton {
+        width: 90%;
+        height: 4em;
+        background-color: green;
+        color: white;
+
+        margin: 30px auto;
+        padding: 20px;
+      }
+    }
+  }
+
+  @include sm {
+    // 576px window width and more
+
+    .Tool-images {
+      margin: 30px 0;
+      display: flex;
+      justify-content: space-evenly;
+      padding: 20px;
+
+      .Tool-preview-images {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        order: 1;
+        padding-left: 20px;
+
+        img {
+          width: 4em;
+          height: 4em;
+          margin: 5px;
+        }
+      }
+
+      .Tool-activeImg {
+        width: 500px;
+        height: 500px;
+        order: 2;
+      }
+    }
+
+    .Tool-cart {
+      background: whitesmoke;
+      width: 60%;
+
+      margin: 40px auto;
+      padding: 20px;
+
+      .Tool-controlCount {
+        display: inline-flex;
+        justify-content: center;
+        width: 90%;
+        padding: 5px;
+
+        .Tool-controlCount-controls {
+          width: 75px;
+          height: 50px;
+        }
+
+        .Tool-controlCount-count {
+          width: 50px;
+          height: 50px;
+          margin: 0 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 30px;
+        }
+      }
+
+      .Tool-cartButton {
+        width: 90%;
+        height: 3em;
+        background-color: green;
+        color: white;
+
+        margin: 10px auto;
+        padding: 20px;
+      }
+    }
+  }
+
+  @include md {
+    // 752px window width and more
+    .Tool-presentation {
+      .Tool-images {
+        display: flex;
+
+        .Tool-activeImg {
+          width: $screen-xs-min;
+          height: $screen-xs-min;
+          align-self: center;
+          padding: 5px;
+        }
+
+        .Tool-preview-images {
+          img {
+            width: 70px;
+            height: 70px;
+
+            padding: 5px;
+          }
+        }
+      }
+    }
+
+    .Tool-information {
+      display: block;
+      padding: 10px;
+      padding-top: 0;
+
+      h1 {
+        background-color: green;
+        width: 100%;
+        padding: 30px;
+        margin: 0;
+        color: white;
+      }
+      .descriptions {
+        text-align: start;
+        padding-left: 15px;
+        font-size: large;
+        width: 40%;
+        margin-top: 40px;
+        float: right;
+      }
+
+      .Tool-cart {
+        width: 50%;
+        float: left;
+
+        .Tool-controlCount {
+          display: inline-flex;
+          justify-content: center;
+          width: 90%;
+          padding: 5px;
+
+          .Tool-controlCount-controls {
+            width: 75px;
+            height: 50px;
+          }
+
+          .Tool-controlCount-count {
+            width: 50px;
+            height: 50px;
+            margin: 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+          }
+        }
+
+        .Tool-cartButton {
+          width: 90%;
+          height: 4em;
+          background-color: green;
+          color: white;
+
+          margin: 10px auto;
+          padding: 20px;
+        }
+      }
+    }
+  }
+
+  @include lg {
+    display: flex;
+    flex-direction: row;
+    width: 992px;
+    padding: 0;
+    padding-top: 200px; // 992px window width and more
+    margin: auto;
+    border: solid green 2px;
+    border-bottom: solid green 50px;
+
+    .Tool-presentation {
+      width: 60%;
+
+      h2 {
+        float: left;
+        width: 100%;
+        position: absolute;
+        top: 0;
+      }
+      .Tool-activeImg {
+        width: 20em;
+        height: 20em;
+      }
+
+      .Tool-preview-images {
+      }
+    }
+
+    .Tool-information {
+      display: flex;
+      padding: 10px;
+      padding-top: 0;
+      flex-direction: column;
+
+      h1 {
+        background-color: green;
+        width: 100%;
+        padding: 30px;
+        margin: 0;
+        color: white;
+      }
+      .descriptions {
+        text-align: start;
+        padding-left: 15px;
+        font-size: large;
+        width: 100%;
+        margin-top: 10px;
+        order: 3;
+      }
+
+      .Tool-cart {
+        width: 100%;
+
+        .Tool-controlCount {
+          display: inline-flex;
+          justify-content: center;
+          width: 90%;
+          padding: 5px;
+
+          .Tool-controlCount-controls {
+            width: 75px;
+            height: 50px;
+          }
+
+          .Tool-controlCount-count {
+            width: 50px;
+            height: 50px;
+            margin: 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+          }
+        }
+
+        .Tool-cartButton {
+          width: 90%;
+          height: 4em;
+          background-color: green;
+          color: white;
+          order: 2;
+
+          margin: 10px auto;
+          padding: 20px;
+        }
+      }
+    }
+  }
+
+  @include xl {
+    // 1200px window width and more
+  }
+}

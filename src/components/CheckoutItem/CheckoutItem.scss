@@ -1,0 +1,86 @@
+$darkish: #2c2c2c;
+
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+@mixin rwd($screen) {
+  @media (min-width: $screen+"px") {
+    @content;
+  }
+}
+.CheckoutItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1em;
+
+  .CheckoutItem-info {
+    display: flex;
+    flex-direction: row;
+    margin: 1em 0;
+
+    img {
+      width: 35%;
+    }
+
+    .CheckoutItem-text {
+      width: 65%;
+      display: flex;
+      flex-direction: column;
+      padding-left: 1em;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+      .CheckoutItem-title {
+        font-weight: 600;
+      }
+      .CheckoutItem-price {
+        font-size: x-large;
+        font-weight: 700;
+      }
+
+      .CheckoutItem-stock {
+        color: blue;
+      }
+    }
+  }
+
+  .CheckoutItem-utils {
+    display: inline-flex;
+    margin-top: 1em;
+    form {
+      width: 4em;
+    }
+
+    button {
+      font-weight: 800;
+      padding: 0.3em;
+      margin-left: 0.5em;
+    }
+  }
+
+  @include sm {
+  }
+}

@@ -1,0 +1,19 @@
+.ShoppingCartIcon {
+  position: relative;
+  padding: 1em;
+
+  .ShoppingCartIcon-icon {
+    width: 3em;
+    height: 3em;
+  }
+  .cart-count {
+    position: absolute;
+    top: 2.2em;
+    right: 2.2em;
+    font-weight: 800;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

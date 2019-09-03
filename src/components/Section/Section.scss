@@ -1,0 +1,30 @@
+$darkish: #2c2c2c;
+.Section {
+  border: solid $darkish 1px;
+  border-radius: 10px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  .Section-header {
+    width: 100%;
+    background-color: $darkish;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .Section-types {
+    display: inline-flex;
+    justify-content: space-evenly;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

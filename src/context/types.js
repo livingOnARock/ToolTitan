@@ -1,0 +1,3 @@
+export const SET_CATEGORY = "SET_CATEGORY";
+export const CLEAR_TOOLS = "CLEAR_TOOLS";
+export const SET_ACTIVETOOLS = "SET_ACTIVETOOLS";

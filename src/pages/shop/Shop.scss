@@ -1,0 +1,12 @@
+.Shop {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+  & :last-child {
+    margin-bottom: 4em;
+  }
+}

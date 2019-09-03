@@ -1,0 +1,83 @@
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+@mixin rwd($screen) {
+  @media (min-width: $screen+"px") {
+    @content;
+  }
+}
+
+.Checkout {
+  width: 100%;
+  max-width: 60em;
+  margin: auto;
+  padding-bottom: 10em;
+
+  table {
+    width: 90%;
+    margin: auto;
+    border: solid #2c2c2c 1px;
+  }
+  th {
+    width: 20%;
+    text-align: center;
+    border-bottom: solid #2c2c2c 1px;
+    padding: 1em 0;
+    margin: 2em 0;
+  }
+
+  .cartTotal {
+    width: 100%;
+    height: 2em;
+    background-color: #2c2c2c;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 2em;
+    font-size: x-large;
+    margin: auto;
+
+    span {
+      margin: 0 0.5em;
+    }
+  }
+  .no-items-message {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+  }
+  .StripeButton {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 2em;
+  }
+
+  @include sm {
+  }
+}
