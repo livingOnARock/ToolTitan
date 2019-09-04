@@ -10,4 +10,4 @@ An E-COMMERCE site to sell power tools. This project is built with React and Nod
 
 ###### SCREENSHOT
 
-# ![](src/srcImgs/ToolTitanScreenshot.JPG)
+# ![](src/assets/ToolTitanScreenshot.png)
